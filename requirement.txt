@@ -1,0 +1,6 @@
+PyYAML==5.4.1
+PyJWT==2.2.0
+torch==1.9.1
+pytorch-lightning==1.4.9
+azureml-core==1.33.0
+azureml-dataset-runtime==1.34.0

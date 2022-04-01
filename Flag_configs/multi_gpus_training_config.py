@@ -66,3 +66,36 @@ def wandb_set():
     flags.DEFINE_enum(
         'wandb_mod', 'run', ['run', 'dryrun'],
         'update the to the wandb server or not')
+
+def machine_config(): 
+    flags = Mock_Flag()
+
+    flags.DEFINE_integer(
+        "nodes",  2, 
+        "Number of nodes in cluster training"
+    )
+
+    flags.DEFINE_integer(
+        "num_gpus",  8, 
+        "Number of nodes in cluster training"
+    )
+
+    flags.DEFINE_enum(
+        "your_choice" , "op1", ["op1","op2"], 
+        "your options"
+    )
+
+    flags.DEFINE_string(
+        'resource_group', "<workspace-name>-common",
+        'Replace with your resource group by providing the cluster name')
+    
+    flags.DEFINE_string(
+        'compute_target', '<cluster-name>',
+        'Replace with the name of your cluster')
+
+    flags.DEFINE_string(
+        'job_script_name', 'train.py',
+        'The script to train the model')
+
+
+
