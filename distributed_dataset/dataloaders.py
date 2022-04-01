@@ -68,6 +68,7 @@ class dataloaders_module(pl.LightningDataModule):
     def setup(self, stage: Optional[str] = None):
         """
         Anything called here is being distributed across GPUs
+        Applying multiple transformations
         (do many times).  Lightning handles distributed sampling.
         """
         # Build the val dataset
@@ -97,6 +98,8 @@ class dataloaders_module(pl.LightningDataModule):
             num_workers=self.num_workers,
             pin_memory=True
         )
+
+        
     def val_dataloader(self):
         return DataLoader(
             self.val_dataset,

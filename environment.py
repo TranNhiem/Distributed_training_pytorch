@@ -20,7 +20,8 @@ def print_dl_library_versions():
 
 #Testing the Multi-Node Environments
 def configure_multi_node_environment(nodes):
-    os.environ["MASTER_ADDR"] = os.environ["AZ_BATCHAI_MPI_MASTER_NODE"]
+    # Configure using MPI communication method
+    os.environ["MASTER_ADDR"] = os.environ["AZ_BATCHAI_MPI_MASTER_NODE"] # NCCL Optional
     os.environ["MASTER_PORT"] = "6105"
     os.environ["NODE_RANK"] = os.environ["OMPI_COMM_WORLD_RANK"]
 
