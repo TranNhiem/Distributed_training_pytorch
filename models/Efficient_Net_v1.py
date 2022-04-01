@@ -145,9 +145,7 @@ def scale_width(w, w_factor):
         new_w += 8
     return int(new_w)
 
-
-
-class EfficientNet(pl.LightningModule): 
+class EfficientNet(nn.Module): 
     """
     Generate the EfficientNet model that take in Width and Depth Scale factors and using Compound Scale Accordingly
     """

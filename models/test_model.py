@@ -5,9 +5,6 @@ import math
 from torch import nn
 
 
-
-class 
-
 class test_model(pl.LightningModule): 
     def __init__(self, num_layer, num_classes): 
         super().__init__()
